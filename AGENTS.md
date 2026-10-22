@@ -30,7 +30,8 @@ It enables players and administrators to create, manage, list, and teleport to w
 Warps/
 ├── .github/
 │   └── workflows/
-│       └── build.yml                  # CI build and verification workflow
+│       ├── build.yml                  # CI build and verification workflow
+│       └── release.yml                # Automated Modrinth publishing workflow
 ├── gradle/wrapper/                    # Gradle wrapper binaries & configuration
 ├── src/
 │   └── main/

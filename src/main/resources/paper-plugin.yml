@@ -6,6 +6,7 @@ api-version: '1.21'
 load: POSTWORLD
 
 description: A modern, high-performance warp plugin with native Folia and Paper support.
+website: https://modrinth.com/plugin/warps
 folia-supported: true
 
 authors: [ tanczikmate ]
