@@ -39,6 +39,7 @@ val localPluginsDir = localProperties.getProperty("local.plugins.dir")
 
 val copyToMyServer by tasks.registering(Copy::class) {
     description = "Copy the built jar to the server folder"
+    doNotTrackState("Destination directory contains files locked by running server instances")
     from(tasks.jar)
     into(file(localPluginsDir))
     rename { "Warps.jar" }
