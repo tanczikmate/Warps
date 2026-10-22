@@ -1,0 +1,49 @@
+name: Warps
+version: '${version}'
+
+main: me.tanczikmate.warps.Warps
+api-version: '1.21'
+load: POSTWORLD
+
+description: A modern, high-performance warp plugin with native Folia and Paper support.
+folia-supported: true
+
+authors: [ tanczikmate ]
+
+permissions:
+  warps.use:
+    description: Allows using /warp
+    default: op
+  warps.set:
+    description: Allows creating and updating warps with /setwarp
+    default: op
+  warps.delete:
+    description: Allows deleting warps with /delwarp
+    default: op
+  warps.list:
+    description: Allows listing warps with /warps
+    default: op
+  warps.reload:
+    description: Allows reloading the Warps configuration
+    default: op
+  warps.teleport.others:
+    description: Allows teleporting other players to warps
+    default: op
+  warps.bypass.warmup:
+    description: Bypasses the teleport warmup delay
+    default: op
+  warps.bypass.cooldown:
+    description: Bypasses the teleport cooldown
+    default: op
+  warps.admin:
+    description: Grants full administrative access to Warps
+    default: op
+    children:
+      warps.use: true
+      warps.set: true
+      warps.delete: true
+      warps.list: true
+      warps.reload: true
+      warps.teleport.others: true
+      warps.bypass.warmup: true
+      warps.bypass.cooldown: true

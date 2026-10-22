@@ -1,0 +1,73 @@
+# ========================================================
+#                 Warps Configuration File
+# ========================================================
+
+settings:
+  # Whether a general permission ('warps.use') is required to use /warp and /warps.
+  # If false, any player can use /warp and /warps.
+  require-permission: false
+
+  # Whether each warp requires an individual permission ('warps.warp.<warpname>').
+  # If true, players can only teleport to and tab-complete warps they have permission for.
+  per-warp-permissions: false
+
+  # Teleport delay (warmup) in seconds. Set to 0 to disable.
+  teleport-warmup: 0
+
+  # Cancel teleportation if the player moves during warmup?
+  # If true, changing block coordinates will cancel the warmup (looking around is allowed).
+  cancel-on-move: true
+
+  # Cancel teleportation if the player takes damage during warmup?
+  cancel-on-damage: false
+
+  # Teleport cooldown in seconds. Set to 0 to disable.
+  teleport-cooldown: 0
+
+  # Temporary damage protection in seconds after teleporting (e.g. 3). Set to 0 to disable.
+  post-teleport-protection: 3
+
+# All messages support MiniMessage formatting (<red>, <green>, <#rrggbb>, <bold>, etc.)
+messages:
+  prefix: "<gold>[Warps]</gold> "
+
+  only-players: "<red>Only players can use this command!</red>"
+  no-permission: "<red>You don't have permission to do that.</red>"
+  no-permission-warp: "<red>You do not have permission to warp to <white><warp></white>!</red>"
+  reload-success: "<green>Configuration and warps reloaded successfully!</green>"
+
+  # Warp messages
+  warp-not-found: "<red>Warp <white><warp></white> does not exist.</red>"
+  warp-success: "<green>Teleported to <white><warp></white>!</green>"
+  warp-set: "<green>Warp <white><warp></white> has been set to your current location.</green>"
+  warp-deleted: "<green>Warp <white><warp></white> has been deleted.</green>"
+  invalid-warp-name: "<red>Warp names cannot contain special characters like <white><, >, ', \", :, .</white></red>"
+  world-not-loaded: "<red>The world '<white><world></white>' for warp <white><warp></white> is not loaded!</red>"
+
+  # Teleport others
+  player-not-found: "<red>Player <white><target></white> was not found or is offline.</red>"
+  teleported-other: "<green>Teleported <white><target></white> to <white><warp></white>!</green>"
+  teleported-by-other: "<green>You have been teleported to <white><warp></white> by <white><sender></white>.</green>"
+
+  # List
+  warp-list-empty: "<yellow>There are no warps available.</yellow>"
+  warp-list-header: "<gold>=== Available Warps (<count>) ===</gold>"
+  warp-list-item: "<click:run_command:'/warp <warp>'><hover:show_text:'<gray>Click to teleport to <white><warp></white></gray>'><yellow><warp></yellow></hover></click>"
+  warp-list-separator: "<gray>, </gray>"
+
+  # Warmup & Cooldown
+  warmup-started: "<yellow>Teleporting to <white><warp></white> in <seconds> seconds. Do not move!</yellow>"
+  warmup-cancelled: "<red>Teleportation cancelled because you moved!</red>"
+  warmup-cancelled-damage: "<red>Teleportation cancelled because you took damage!</red>"
+  cooldown-active: "<red>You must wait <seconds> more second(s) before warping again.</red>"
+  already-teleporting: "<red>You are already preparing to teleport!</red>"
+
+  # Protection
+  protection-ended-attack: "<yellow>Your post-teleport protection ended because you attacked an entity!</yellow>"
+
+  # Command usage
+  usage-warp: "<yellow>Usage: /warp <name> [player]</yellow>"
+  usage-warp-console: "<yellow>Usage: /warp <name> <player></yellow>"
+  usage-setwarp: "<yellow>Usage: /setwarp <name></yellow>"
+  usage-delwarp: "<yellow>Usage: /delwarp <name></yellow>"
+  usage-warps: "<yellow>Usage: /warps [reload]</yellow>"
